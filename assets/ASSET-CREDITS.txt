@@ -1,0 +1,47 @@
+THE WIZARDING WORLD — ASSET CREDITS
+
+This project currently uses original CSS artwork, inline SVG, Unicode ornamentation,
+and curated local fallback data. No copyrighted film soundtrack or third-party character
+photography is bundled.
+
+Typography: the CSS stacks prefer Cinzel Decorative/Cinzel and Cormorant Garamond
+when available locally, then use Palatino/Georgia/system serif fallbacks. No remote
+font request is required.
+
+Local user-supplied artwork:
+- assets/images/sorting.webp — Sorting Ceremony Great Hall artwork
+- assets/images/House of Lion.webp — Gryffindor house artwork
+- assets/images/House of Serpent.webp — Slytherin house artwork
+- assets/images/House of Eagle.webp — Ravenclaw house artwork
+- assets/images/House of Badger.webp — Hufflepuff house artwork
+The site owner should record the original creators, source URLs, and license terms for
+these supplied files when that information is available.
+
+Cast-credit reference:
+- IMDb community list, “Harry Potter: MOVIE CAST FROM ALL SERIES”
+  https://www.imdb.com/list/ls505063769/
+Actor names, character credits, and IMDb name identifiers are referenced with direct
+profile links. IMDb labels the supplied list as community-created and unverified.
+
+Cast portraits:
+- assets/images/characters/*.jpg
+- Source pages and portrait URLs: the supplied IMDb community list and IMDb name pages
+- Retrieved from IMDb's media host at a locally cached display size
+These images remain the property of their respective copyright holders and are included
+only at the user's request for this unofficial, non-commercial fan experience.
+
+Creature artwork supplied locally by the site owner:
+- assets/images/phoenix.jpg
+- assets/images/Proud winged creature.jpg
+- assets/images/Thestral.jpg
+- assets/images/Niffler.jpg
+- assets/images/Basilisk.avif
+- assets/images/House-Elf.webp
+Original creator/source/license details were not supplied and should be added here when known.
+
+Optional user-supplied media paths:
+- assets/video/hogwarts-background.mp4
+- assets/audio/wizarding-ambience.mp3
+
+Only add media you have the right to use, and record its title, author, source URL,
+license, and any required attribution in this file.

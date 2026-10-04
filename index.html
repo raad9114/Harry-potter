@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An unofficial, interactive journey through Hogwarts: houses, characters, spells, creatures, history, and a magical map.">
+  <meta name="author" content="Zaoyad Khan Raad">
+  <meta name="theme-color" content="#080d1c">
+  <title>The Wizarding World — An Unofficial Hogwarts Journey</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-scene">
+      <div class="preloader-moon"></div>
+      <svg class="castle-mark" viewBox="0 0 500 220" aria-hidden="true">
+        <path d="M25 204h450M62 203v-67h27v-47l14-24 14 24v47h38v-72l18-32 18 32v46h35v-86l22-20 22 20v86h40V77l18-31 18 31v59h38v-42l15-25 15 25v109"/>
+        <path d="M45 203h420l-17-28H64z"/><g class="windows"><path d="M96 112v15m72-43v18m74-55v21m78 35v18m74-6v16"/></g>
+      </svg>
+      <div class="preloader-owl" aria-hidden="true">✉</div>
+      <p class="eyebrow">Hogwarts Is Calling</p>
+      <h1>Magic Is Awakening</h1>
+      <div class="loading-track"><span id="loading-bar"></span></div>
+      <p class="loading-value"><span id="loading-percent">0</span>%</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="The Wizarding World home"><span class="brand-star" aria-hidden="true">✦</span><span>Wizarding<br>World</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a><a href="#sorting">Sorting</a><a href="#houses">Houses</a><a href="#characters">Characters</a>
+        <a href="#map">Map</a><a href="#spells">Spells</a><a href="#creatures">Creatures</a><a href="#history">History</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to candlelit theme" title="Switch to candlelit theme"><span aria-hidden="true">☼</span></button>
+        <button class="icon-button" id="sound-toggle" type="button" aria-label="Play ambient sound" title="Play ambient sound" aria-pressed="false"><span aria-hidden="true">♪</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <video class="hero-video" id="hero-video" muted loop playsinline aria-hidden="true"></video>
+      <div class="hero-backdrop" aria-hidden="true"><div class="castle-css"><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="fog fog-one" aria-hidden="true"></div><div class="fog fog-two" aria-hidden="true"></div>
+      <div class="particles" id="global-particles" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">An Interactive Journey Through the Wizarding World</p>
+        <h1 id="hero-title">The Magic<br>of Hogwarts</h1>
+        <div class="wand-divider" aria-hidden="true"><span>✦</span><i></i><span>⋆</span><i></i><span>✦</span></div>
+        <p class="hero-subtitle">“Help will always be given at Hogwarts to those who ask for it.”</p>
+        <div class="hero-actions"><a class="button button-primary" href="#sorting">✦ Enter Hogwarts</a><a class="button button-ghost" href="#houses">Discover Your House</a></div>
+      </div>
+      <dl class="hero-stats" aria-label="Wizarding statistics">
+        <div><dt>04</dt><dd>Hogwarts Houses</dd></div><div><dt>07</dt><dd>School Years</dd></div><div><dt>142</dt><dd>Staircases</dd></div><div><dt>∞</dt><dd>Possibilities</dd></div>
+      </dl>
+      <a class="scroll-cue" href="#featured-quote"><span>Scroll to Explore</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <section class="featured-quote section" id="featured-quote" aria-labelledby="featured-quote-title">
+      <div class="quote-dust" aria-hidden="true"></div>
+      <div class="quote-frame reveal">
+        <i class="corner tl" aria-hidden="true"></i><i class="corner tr" aria-hidden="true"></i><i class="corner bl" aria-hidden="true"></i><i class="corner br" aria-hidden="true"></i>
+        <p class="eyebrow">Words from the Headmaster</p><div class="quote-crest" aria-hidden="true">✦</div>
+        <h2 class="sr-only" id="featured-quote-title">Featured quotation</h2>
+        <blockquote><span class="open-quote" aria-hidden="true">“</span><p>Happiness can be found even in the darkest of times, if one only remembers to turn on the light.</p><span class="close-quote" aria-hidden="true">”</span>
+          <footer><cite>Albus Dumbledore</cite><span>Headmaster of Hogwarts</span></footer>
+        </blockquote><div class="quote-rule" aria-hidden="true"><i></i><b>◇</b><i></i></div>
+      </div>
+    </section>
+
+    <section class="sorting section parchment-section" id="sorting" aria-labelledby="sorting-title">
+      <div class="section-heading reveal"><p class="eyebrow">The Hat Awaits</p><h2 id="sorting-title">The Sorting Ceremony</h2><p>Answer the call of the Sorting Hat and discover where you belong.</p></div>
+      <div class="sorting-stage reveal" id="sorting-stage">
+        <div class="sorting-hat"><img src="assets/images/sorting.webp" width="1536" height="1024" loading="lazy" alt="The Sorting Hat displayed on a stool beneath floating candles in the Hogwarts Great Hall"></div>
+        <div class="sorting-content">
+          <div class="sorting-intro" id="sorting-intro"><h3>Your choices reveal your character</h3><p>Six questions of values, instinct, and intent stand between you and your house.</p><button class="button button-primary" id="sorting-start" type="button">Begin the Ceremony</button><p class="fine-print">A playful, fan-made experience—not an official sorting.</p></div>
+          <div class="sorting-quiz" id="sorting-quiz" hidden><div class="quiz-meta"><span id="question-count">Question 1 of 6</span><div class="quiz-progress"><span id="quiz-progress-bar"></span></div></div><h3 id="question-text"></h3><div class="answer-list" id="answer-list"></div><button class="text-button" id="sorting-previous" type="button">← Previous question</button></div>
+          <div class="sorting-result" id="sorting-result" hidden></div>
+          <div class="sr-only" id="sorting-live" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="houses section" id="houses" aria-labelledby="houses-title">
+      <div class="section-heading reveal"><p class="eyebrow">Four Legacies</p><h2 id="houses-title">The Great Houses</h2><p>Every house carries a story, a virtue, and a place within Hogwarts.</p></div>
+      <div class="card-grid houses-grid" id="houses-grid"></div>
+    </section>
+
+    <section class="characters section" id="characters" aria-labelledby="characters-title">
+      <div class="section-heading reveal"><p class="eyebrow">The People of the Story</p><h2 id="characters-title">Witches and Wizards</h2><p>Search a curated archive of familiar figures from the wizarding world.</p></div>
+      <div class="filter-toolbar reveal">
+        <label class="search-field"><span class="sr-only">Search characters</span><span aria-hidden="true">⌕</span><input id="character-search" type="search" placeholder="Search by name, title, house…" autocomplete="off"></label>
+        <div class="filter-chips" id="character-filters" role="group" aria-label="Filter characters"></div>
+      </div>
+      <div class="archive-meta"><p id="character-status" role="status"></p><p><strong id="character-visible">0</strong> of <span id="character-total">0</span> shown</p></div>
+      <div class="card-grid character-grid" id="character-grid" aria-live="polite"></div>
+      <div class="empty-state" id="character-empty" hidden><span aria-hidden="true">✧</span><h3>No names answered the call</h3><p>Try another search or clear the selected filter.</p></div>
+    </section>
+
+    <section class="map-section section parchment-section" id="map" aria-labelledby="map-title">
+      <div class="section-heading reveal"><p class="eyebrow">Mischief Managed</p><h2 id="map-title">The Marauder’s Map</h2><p>A fictional, illustrated guide to enchanted places near and far.</p></div>
+      <div class="map-controls reveal"><label class="search-field"><span class="sr-only">Search locations</span><span aria-hidden="true">⌕</span><input id="map-search" type="search" placeholder="Find a place…" list="map-suggestions"></label><datalist id="map-suggestions"></datalist><select id="map-filter" aria-label="Filter location type"></select><button class="button button-small" id="map-reset" type="button">Reset Map</button></div>
+      <div class="map-layout reveal">
+        <div class="map-canvas" id="map-canvas"><p class="map-loading" id="map-loading" role="status">Unfolding the parchment…</p>
+          <svg id="map-svg" viewBox="0 0 1000 650" role="img" aria-labelledby="map-svg-title map-svg-desc" hidden><title id="map-svg-title">Illustrated map of wizarding locations</title><desc id="map-svg-desc">A fictional parchment map with keyboard-accessible markers.</desc>
+            <defs><filter id="rough"><feTurbulence baseFrequency=".02" numOctaves="3" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="4"/></filter></defs>
+            <path class="map-path" d="M90 540C210 430 170 250 330 210S520 290 610 170 820 90 915 190M220 570C420 520 450 390 620 410S790 540 930 480"/>
+            <path class="river" d="M25 330C180 280 260 390 405 340S650 250 980 325"/><g id="map-markers"></g>
+            <g class="footprints" aria-hidden="true"><text><textPath href="#footpath">••  ••  ••  ••  ••</textPath></text></g><path id="footpath" d="M170 520 Q420 300 780 420" fill="none"/>
+          </svg>
+        </div>
+        <aside class="map-info" id="map-info" aria-live="polite"><button class="map-info-close" id="map-info-close" type="button" aria-label="Close location details" hidden>×</button><div class="map-placeholder"><span aria-hidden="true">⌖</span><h3>Select a location</h3><p>Choose a marker or search the map to reveal its story.</p></div></aside>
+      </div><p class="attribution">Original decorative SVG map; locations are fictional and not geographically precise.</p>
+    </section>
+
+    <section class="spells section" id="spells" aria-labelledby="spells-title">
+      <div class="section-heading reveal"><p class="eyebrow">Incantations & Charms</p><h2 id="spells-title">The Book of Spells</h2><p>Turn the pages, study the motion, and practise a little controlled magic.</p></div>
+      <div class="filter-toolbar reveal"><label class="search-field"><span class="sr-only">Search spells</span><span aria-hidden="true">⌕</span><input id="spell-search" type="search" placeholder="Search spells and purposes…"></label><select id="spell-filter" aria-label="Filter spells by classification"></select><p class="count"><strong id="spell-count">0</strong> spells</p></div>
+      <div class="spell-stage" id="spell-stage" aria-live="polite"><span class="spell-stage-rune" aria-hidden="true">✧</span><p id="spell-stage-message">Select “Practice Spell” to test an incantation.</p></div>
+      <div class="card-grid spell-grid" id="spell-grid"></div><div class="empty-state" id="spell-empty" hidden><h3>No spell found</h3><p>Try a broader search or another classification.</p></div>
+    </section>
+
+    <section class="creatures section parchment-section" id="creatures" aria-labelledby="creatures-title">
+      <div class="section-heading reveal"><p class="eyebrow">From the Field Notes</p><h2 id="creatures-title">Fantastic Beasts and Magical Creatures</h2><p>Encounters with the remarkable beings who inhabit the wizarding world.</p></div>
+      <div class="creature-list" id="creature-list"></div>
+    </section>
+
+    <section class="history section" id="history" aria-labelledby="history-title">
+      <div class="section-heading reveal"><p class="eyebrow">Centuries of Wonder</p><h2 id="history-title">A History of Magic</h2><p>Selected moments from the long, sometimes uncertain story of the wizarding world.</p></div><div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="quotes section" id="quotes" aria-labelledby="quotes-title">
+      <div class="section-heading reveal"><p class="eyebrow">Wisdom & Wit</p><h2 id="quotes-title">Words That Endure</h2></div>
+      <div class="quote-carousel reveal" id="quote-carousel" aria-roledescription="carousel"><button class="carousel-button prev" id="quote-prev" type="button" aria-label="Previous quotation">←</button><div class="carousel-viewport" id="quote-viewport" aria-live="off"></div><button class="carousel-button next" id="quote-next" type="button" aria-label="Next quotation">→</button><div class="carousel-dots" id="quote-dots"></div></div>
+    </section>
+
+    <section class="owl-section section parchment-section" id="owl" aria-labelledby="owl-title">
+      <div class="section-heading reveal"><p class="eyebrow">The Owlery Is Open</p><h2 id="owl-title">Send an Owl</h2><p>Compose a demonstration letter on enchanted parchment.</p></div>
+      <div class="letter-wrap reveal"><div class="quill" aria-hidden="true">❧</div><form class="owl-form" id="owl-form" novalidate>
+        <div class="form-row"><div class="form-field"><label for="owl-name">Name <span aria-hidden="true">*</span></label><input id="owl-name" name="name" required autocomplete="name"><small id="owl-name-error" class="field-error"></small></div><div class="form-field"><label for="owl-email">Email <span aria-hidden="true">*</span></label><input id="owl-email" name="email" type="email" required autocomplete="email"><small id="owl-email-error" class="field-error"></small></div></div>
+        <div class="form-field"><label for="owl-subject">Subject <span aria-hidden="true">*</span></label><input id="owl-subject" name="subject" required><small id="owl-subject-error" class="field-error"></small></div>
+        <div class="form-field"><label for="owl-message">Message <span aria-hidden="true">*</span></label><textarea id="owl-message" name="message" rows="6" required></textarea><small id="owl-message-error" class="field-error"></small></div>
+        <button class="button button-primary seal-button" type="submit"><span class="wax-seal" aria-hidden="true">W</span>Seal and Send</button><p class="form-status" id="form-status" role="status" tabindex="-1"></p>
+      </form></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><span aria-hidden="true">✦</span><h2>The Wizarding World</h2><p>An enchanted fan-made journey.</p></div><div class="wand-divider" aria-hidden="true"><span>✦</span><i></i><span>⋆</span><i></i><span>✦</span></div><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#houses">Houses</a><a href="#characters">Characters</a><a href="#map">Map</a><a href="#spells">Spells</a><a href="#owl">Send an Owl</a></nav><p class="creator-credit">Created with passion by <a href="https://zaoyadkhanraad.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Zaoyad Khan Raad’s official website">Zaoyad Khan Raad</a> as an unofficial fan experience.</p><p class="disclaimer">This is an unofficial, non-commercial fan project created for educational and entertainment purposes. It is not affiliated with, endorsed by, or sponsored by Warner Bros. Entertainment, J.K. Rowling, Wizarding World Digital, or any related rights holders. Harry Potter, Hogwarts, Wizarding World, and related names and marks belong to their respective owners.</p><p class="copyright">© <span id="year"></span> Original site implementation. Local serif font stacks with system fallbacks; original CSS/SVG artwork and local fallback data. See <a href="assets/ASSET-CREDITS.txt">asset credits</a>.</p></footer>
+
+  <div class="modal" id="global-modal" aria-hidden="true"><div class="modal-overlay" data-modal-close></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"><button class="modal-close" type="button" aria-label="Close dialog" data-modal-close>×</button><div id="modal-content"></div></div></div>
+  <div class="wand-cursor" id="wand-cursor" aria-hidden="true"><i></i></div>
+  <div class="sr-only" id="audio-live" aria-live="polite"></div>
+  <audio id="ambient-audio" loop preload="none"></audio>
+  <script src="script.js" defer></script>
+</body>
+</html>
